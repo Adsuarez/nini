@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ciudad', function (Blueprint $table) {
-            $table->increments('id_ciudad');
+        Schema::create('ies', function (Blueprint $table) {
+            $table->increments('id_ies');
             $table->timestamps();
-            $table->string('nombre', 100);
+            $table->string('nombre', 100)->unique();
+            $table->unsignedInteger('id_programa')->nullable();
+            $table->foreign('id_programa')->references('id_programa')->on('programa_formativo');
         });
     }
 
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ciudad');
+        Schema::dropIfExists('ies');
     }
 };
