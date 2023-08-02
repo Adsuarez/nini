@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Ies_padreController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/instituciones', function () {
-    return view('ies-padre.index');
-});
+Route::resource('instituciones', Ies_padreController::class);
