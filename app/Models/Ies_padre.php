@@ -9,6 +9,6 @@ class Ies_padre extends Model
 {
     use HasFactory;
     protected $table = 'ies_padre';
-    protected $primaryKey = 'codigo-institucion';
-    protected $fillable = ['codigo-institucion', 'nombre-institucion', 'siglas-institucion', 'logo-institucion', 'costo-inscripcion'];
+    protected $primaryKey = 'codigo_institucion';
+    protected $fillable = ['codigo_institucion', 'nombre_institucion', 'siglas_institucion', 'logo_institucion', 'costo_inscripcion'];
 }
