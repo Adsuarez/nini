@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('programa_formativo', function (Blueprint $table) {
             $table->timestamps();
-            $table->unsignedInteger('codigo-sede');
-            $table->foreign('codigo-sede')->references('codigo-sede')->on('ies_sede')->onDelete('cascade');
-            $table->unsignedInteger('codigo-programa')->unique();
-            $table->string('nombre-programa', 200);
-            $table->smallInteger('semestres-programa');
+            $table->unsignedInteger('codigo_sede');
+            $table->foreign('codigo_sede')->references('codigo_sede')->on('ies_sede')->onDelete('cascade');
+            $table->unsignedInteger('codigo_programa')->unique();
+            $table->string('nombre_programa', 200);
+            $table->smallInteger('semestres_programa');
         });
     }
 

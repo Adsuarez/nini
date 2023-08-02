@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('ies_padre', function (Blueprint $table) {
             $table->timestamps();
-            $table->unsignedInteger('codigo-institucion')->unique();
-            $table->string('nombre-institucion', 100)->unique();
-            $table->string('siglas-institucion', 30);
-            $table->string('logo-institucion', 50)->unique();
-            $table->unsignedInteger('costo-inscripcion');
+            $table->unsignedInteger('codigo_institucion')->unique();
+            $table->string('nombre_institucion', 100)->unique();
+            $table->string('siglas_institucion', 30);
+            $table->string('logo_institucion', 50)->unique();
+            $table->unsignedInteger('costo_inscripcion');
         });
     }
 

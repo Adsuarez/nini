@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('ciudad', function (Blueprint $table) {
             $table->timestamps();
-            $table->unsignedInteger('codigo-ciudad')->unique();
-            $table->string('nombre-ciudad', 100)->unique();
+            $table->unsignedInteger('codigo_ciudad')->unique();
+            $table->string('nombre_ciudad', 100)->unique();
         });
     }
 

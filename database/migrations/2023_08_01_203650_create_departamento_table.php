@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('departamento', function (Blueprint $table) {
             $table->timestamps();
-            $table->unsignedInteger('codigo-departamento')->unique();
-            $table->string('nombre-departamento', 50)->unique();
+            $table->unsignedInteger('codigo_departamento')->unique();
+            $table->string('nombre_departamento', 50)->unique();
         });
     }
 

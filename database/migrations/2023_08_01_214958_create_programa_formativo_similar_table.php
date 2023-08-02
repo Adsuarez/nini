@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('programa_formativo_similar', function (Blueprint $table) {
             $table->timestamps();
-            $table->unsignedInteger('codigo-programa');
-            $table->foreign('codigo-programa')->references('codigo-programa')->on('programa_formativo')->onDelete('cascade');
-            $table->increments('codigo-similitud')->unique();
-            $table->string('nombre-similitud', 200)->unique();
+            $table->unsignedInteger('codigo_programa');
+            $table->foreign('codigo_programa')->references('codigo_programa')->on('programa_formativo')->onDelete('cascade');
+            $table->increments('codigo_similitud')->unique();
+            $table->string('nombre_similitud', 200)->unique();
         });
     }
 
