@@ -35,9 +35,9 @@ class Ies_padreController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Ies_padre $ies_padre)
+    public function show(Ies_padre $institucion)
     {
-        //
+        return view('ies_padre.show', ['institucion' => $institucion]);
     }
 
     /**
